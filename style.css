@@ -1,0 +1,74 @@
+
+:root {
+    --bs-custom-bg: #f7f2e9;
+    --bs-custom-color:#edc84b;
+  }
+
+
+body {
+font-family: "Roboto mono", sans-serif;
+  color: #252525;
+  font-weight: 400;
+  background-color: #f7f2e9;
+  border-bottom: 1.6rem solid #edc84b;
+  min-height: 100vh;
+  padding: 3.2rem; 
+  padding-bottom: 6rem;
+  }
+
+ 
+
+  .custom-font {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .header h1 {
+    text-transform: uppercase;
+    text-align: center;
+    color: #edc84b;
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+  }
+
+  .menu h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+
+ 
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.5rem;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .btn-order {
+    background-color: #edc84b;
+    color: #252525;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+  }
+
+  .btn-order:hover {
+    background-color: #e9bb24;
+  }
+
+  section {
+    display: none;
+    padding: 20px 0;
+  }
+
+ 
+  section:target {
+    display: block;
+  }
+
+  #home{
+    padding-right: 15px;
+    padding-left: 15px;
+  }

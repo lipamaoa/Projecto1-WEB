@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sapori D’Italia</title>
+  <link rel="icon" href="pizzas/favicon.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header py-4 text-center">
+        <h1 class="text-uppercase fw-light fs-1  fs-md-2 fs-lg-3">-Sapori D’Italia-</h1>
+      </header>
+  
+    <!-- NavBar -->
+<nav class="navbar navbar-expand-lg navbar-light mb-4 border-bottom border-top border-black ">
+    <div class="container-fluid">
+    
+      <button 
+        class="navbar-toggler  border-black" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarNav" 
+        aria-controls="navbarNavDropdown" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav text-uppercase">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#menu">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacts">Contacts</a>
+          </li>
+        </ul>
+    </div>
+        <div class="ms-auto d-flex align-items-center">
+          <button class="btn px-4" data-bs-toggle="modal" data-bs-target="#cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <Button class="btn btn-warning  text-uppercase me-3" data-bs-toggle="modal" data-bs-target="#login">Login</Button>
+          </button>
+      </div>
+    </div>
+  </nav>
+  
+  
+      <!-- Sections -->
+
+<!-- Login  -->
+<div class="modal"  id="login" aria-labelledby="loginLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+      <div class="modal-content" style="background-color: var(--bs-custom-bg);" >
+        <div class="modal-header border-black" style="background-color: var(--bs-custom-color);">
+          <h5 class="modal-title text-uppercase" id="loginLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body ">
+          <form>
+            <!-- Email Input -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input 
+                type="email" 
+                class="form-control border-black" 
+                id="email" 
+                placeholder="name@example.com" 
+                required>
+            </div>
+            <!-- Password Input -->
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input 
+                type="password" 
+                class="form-control border-black" 
+                id="password" 
+                placeholder="Enter your password" 
+                required>
+            </div>
+            <!-- Submit Button -->
+            <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-warning">Login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Cart Modal -->
+<div class="modal fade" id="cart" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="background-color: var(--bs-custom-bg);">
+        <div class="modal-header border-black" style="background-color: var(--bs-custom-color);">
+          <h5 class="modal-title text-uppercase" id="cartLabel">Your Cart</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul id="cartItemsList" class="list-group">
+          
+          </ul>
+          <p id="cartTotal" class="mt-3">Total: $0</p>
+        </div>
+        <div class="modal-footer border-black">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-warning" id="checkoutBtn">Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+      <section id="home" class="container py-5">
+        <h2 class="text-center mb-4">Welcome to Sapori D’Italia</h2>
+        <p class="text-center">
+            Sapori D’Italia delivers authentic Italian cuisine straight to your doorstep.
+          Experience our fresh ingredients and creative dishes made with love.
+        </p>
+        <img src="pizzas/italian-restaurant.jpg" class="img-fluid rounded mx-auto d-block" alt="italian-restaurant">
+        <div class="me-auto py-5 text-center">
+            <p>We're open from 12:00 to 22:00. Come visit us or order online.</p>
+            <a href="#menu" class="btn btn-warning btn-order">Order Now!</a>
+ 
+        </div>
+    
+    </section>
+  
+      <section id="menu">
+        <h2 class="text-center text-uppercase mb-4">Our Menu</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <img src="pizzas/focaccia.jpg" class="card-img-top" alt="Focaccia">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">Focaccia </h5>
+                    <p class="fw-bold  mb-0 fs-4">6€</p>
+                </div>
+                <p class="card-text">Bread with Italian olive oil and rosemary</p>
+                <button id="add-to-cart" class="btn btn-warning ms-auto " data-item="focaccia">Add to Cart</button>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <img
+                src="pizzas/margherita.jpg"
+                class="card-img-top"
+                alt="Pizza Margherita"
+              />
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">Pizza Margherita</h5>
+                <p class="fw-bold  mb-0 fs-4">10€</p>    
+            </div>
+                <p class="card-text">Tomato and mozzarella</p><br>
+                 <button id="add-to-cart" class="btn btn-warning ms-auto " data-item="margherita">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <img
+                src="pizzas/spinaci.jpg"
+                class="card-img-top"
+                alt="Pizza Spinaci"
+              />
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">Pizza Spinaci</h5>
+                    <p class="fw-bold  mb-0 fs-4">12€</p>
+                </div>
+                <p class="card-text">
+                  Tomato, mozzarella, spinach, and ricotta cheese
+                </p>
+                <button id="add-to-cart" class="btn btn-warning ms-auto "  data-item="spinaci">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <img
+                src="pizzas/salamino.jpg"
+                class="card-img-top"
+                alt="Pizza Salamino"
+              />
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">Pizza Salamino</h5>
+                    <p class="fw-bold  mb-0 fs-4">13€</p>
+                </div>
+                <p class="card-text">Tomato, mozzarella, and pepperoni</p>
+                <button id="add-to-cart" class="btn btn-warning ms-auto " data-item="salamino">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <img
+                src="pizzas/prosciutto.jpg"
+                class="card-img-top"
+                alt="Pizza Prosciutto"
+              />
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="card-title">Pizza Prosciutto</h5>
+                    <p class="fw-bold  mb-0 fs-4">18€</p>
+                </div>
+                <p class="card-text mb-0">
+                  Tomato, mozzarella, ham, arugula, and burrata cheese
+                </p>
+                <button id="add-to-cart" class="btn btn-warning ms-auto " data-item="prosciutto">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+  
+      <section id="contacts" class="container py-5">
+        <h2 class="text-center mb-4 text-uppercase fs-1">Contact Us</h2>
+        <div class="text-center">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.7465978307287!2d12.534877800000002!3d41.8983065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6314f8281791%3A0x8aacb61be593f136!2sSapori%20d&#39;Italia!5e0!3m2!1sen!2spt!4v1733502074575!5m2!1sen!2spt"
+              width="400" 
+              height="300" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          
+            
+            <p class="mt-2">
+              <a 
+                href="https://www.google.com/maps/place/123+Pizza+Lane,+Food+City,+Italy" 
+                target="_blank" 
+                rel="noopener noreferrer">
+                Open in Google Maps
+              </a>
+            </p>
+          </div>
+          
+        <div class="text-center mb-4 mt-5">
+        <p>Address: Via Carlo Mezzacapo,14/22, 00159, Roma, Italy</p>
+          <p>Phone: +123-456-7890</p>
+          <p>Email: support@saporiditalia.com</p>
+        </div>
+      
+        
+        <form class="mx-auto bg-light p-3 border" style="max-width: 600px;">
+          <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+          </div>
+      
+          <div class="mb-3">
+            <label for="email" class="form-label">Your Email</label>
+            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+          </div>
+      
+          <div class="mb-3">
+            <label for="message" class="form-label">Your Message</label>
+            <textarea id="message" class="form-control" rows="5" placeholder="Enter your message" required></textarea>
+          </div>
+      
+          <div class="text-center">
+            <button type="button" class="btn btn-warning text-uppercase">Send</button>
+          </div>
+        </form>
+      </section>
+      
+  
+      <!-- Footer -->
+      <footer class="footer text-center container">
+        <p class="text-uppercase ">Follow us!!</p>
+            <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+      
+      </footer>
+    </div>
+  
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    
+   
+   <!--FontAwseome-->
+    <script src="https://kit.fontawesome.com/5f0d0250e8.js" crossorigin="anonymous"></script>
+    <script src="./cart.js"></script>
+  </body>
+  
+
+</html>
