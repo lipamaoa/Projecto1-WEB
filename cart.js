@@ -23,7 +23,7 @@ function renderCart() {
     cartItemsList.appendChild(cartItem);
   });
 
-  cartTotal.textContent = `Total: €${total}`;
+  cartTotal.textContent = `Total: ${total}€`;
 }
 
 

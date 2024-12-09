@@ -24,7 +24,6 @@
     <!-- NavBar -->
 <nav class="navbar navbar-expand-lg navbar-light mb-4 border-bottom border-top border-black ">
     <div class="container-fluid">
-    
       <button 
         class="navbar-toggler  border-black" 
         type="button" 
@@ -40,7 +39,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav text-uppercase">
           <li class="nav-item">
-            <a class="nav-link" href="#home">Home</a>
+            <a class="nav-link " href="#home">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#menu">Menu</a>
@@ -62,80 +61,42 @@
   
       <!-- Sections -->
 
-<!-- Login  -->
-<div class="modal"  id="login" aria-labelledby="loginLabel" aria-hidden="true">
-    <div class="modal-dialog ">
-      <div class="modal-content" style="background-color: var(--bs-custom-bg);" >
-        <div class="modal-header border-black" style="background-color: var(--bs-custom-color);">
-          <h5 class="modal-title text-uppercase" id="loginLabel">Login</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body ">
-          <form>
-            <!-- Email Input -->
-            <div class="mb-3">
-              <label for="email" class="form-label">Email address</label>
-              <input 
-                type="email" 
-                class="form-control border-black" 
-                id="email" 
-                placeholder="name@example.com" 
-                required>
-            </div>
-            <!-- Password Input -->
-            <div class="mb-3">
-              <label for="password" class="form-label">Password</label>
-              <input 
-                type="password" 
-                class="form-control border-black" 
-                id="password" 
-                placeholder="Enter your password" 
-                required>
-            </div>
-            <!-- Submit Button -->
-            <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-warning">Login</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- Cart Modal -->
-<div class="modal fade" id="cart" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content" style="background-color: var(--bs-custom-bg);">
-        <div class="modal-header border-black" style="background-color: var(--bs-custom-color);">
-          <h5 class="modal-title text-uppercase" id="cartLabel">Your Cart</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <ul id="cartItemsList" class="list-group">
-          
-          </ul>
-          <p id="cartTotal" class="mt-3">Total: $0</p>
-        </div>
-        <div class="modal-footer border-black">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-warning" id="checkoutBtn">Checkout</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
       <section id="home" class="container py-5">
         <h2 class="text-center mb-4">Welcome to Sapori D’Italia</h2>
         <p class="text-center">
             Sapori D’Italia delivers authentic Italian cuisine straight to your doorstep.
           Experience our fresh ingredients and creative dishes made with love.
         </p>
-        <img src="pizzas/italian-restaurant.jpg" class="img-fluid rounded mx-auto d-block" alt="italian-restaurant">
+
+        
+
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="pizzas/italian-restaurant.jpg" class="img-fluid rounded mx-auto d-block" alt="italian-restaurant">
+            </div>
+            <div class="carousel-item">
+              <img src="pizzas/Italian-Pizzeria.jpg" class="img-fluid rounded mx-auto d-block" alt="italian-pizzeria">
+            </div>
+            <div class="carousel-item">
+              <img src="pizzas/pizza.jpg" class="img-fluid rounded mx-auto d-block" alt="italian-restaurant">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+
         <div class="me-auto py-5 text-center">
             <p>We're open from 12:00 to 22:00. Come visit us or order online.</p>
-            <a href="#menu" class="btn btn-warning btn-order">Order Now!</a>
+            <a href="javascript:void(0);" class="btn btn-warning btn-order" onclick="showMenu()">Order Now!</a>
+
  
         </div>
     
@@ -296,6 +257,71 @@
             <a href=""><i class="fa-brands fa-square-instagram"></i></a>
       
       </footer>
+
+
+      <!--Modals-->
+
+      <!-- Login  -->
+<div class="modal"  id="login" aria-labelledby="loginLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content" style="background-color: var(--bs-custom-bg);" >
+      <div class="modal-header border-black" style="background-color: var(--bs-custom-color);">
+        <h5 class="modal-title text-uppercase" id="loginLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body ">
+        <form>
+          <!-- Email Input -->
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input 
+              type="email" 
+              class="form-control border-black" 
+              id="email-login" 
+              placeholder="name@example.com" 
+              required>
+          </div>
+          <!-- Password Input -->
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input 
+              type="password" 
+              class="form-control border-black" 
+              id="password-login" 
+              placeholder="Enter your password" 
+              required>
+          </div>
+          <!-- Submit Button -->
+          <div class="d-flex justify-content-center">
+          <button type="submit" class="btn btn-warning">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Cart Modal -->
+<div class="modal fade" id="cart" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content" style="background-color: var(--bs-custom-bg);">
+      <div class="modal-header border-black" style="background-color: var(--bs-custom-color);">
+        <h5 class="modal-title text-uppercase" id="cartLabel">Your Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul id="cartItemsList" class="list-group">
+        
+        </ul>
+        <p id="cartTotal" class="mt-3">Total: 0€</p>
+      </div>
+      <div class="modal-footer border-black">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-warning" id="checkoutBtn">Checkout</button>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
   
     <!-- Bootstrap JS -->
@@ -305,6 +331,7 @@
    <!--FontAwseome-->
     <script src="https://kit.fontawesome.com/5f0d0250e8.js" crossorigin="anonymous"></script>
     <script src="./cart.js"></script>
+    <script src="./navbar.js"></script>
   </body>
   
 

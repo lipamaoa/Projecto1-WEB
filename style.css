@@ -16,7 +16,13 @@ font-family: "Roboto mono", sans-serif;
   padding-bottom: 6rem;
   }
 
- 
+  #home{
+    display: block;
+  }
+
+  section{
+    display: none;
+  }
 
   .custom-font {
     font-family: 'Roboto', sans-serif;
